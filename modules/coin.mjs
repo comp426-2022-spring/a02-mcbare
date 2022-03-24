@@ -2,6 +2,8 @@
  * This module will emulate a coin flip given various conditions as parameters as defined below
  */
 
+var Math = require(Math);
+
 /** Simple coin flip
  * 
  * Write a function that accepts no parameters but returns either heads or tails at random.
@@ -15,7 +17,7 @@
  */
 
 function coinFlip() {
-
+  return Math.ceil(Math.random) ? "heads" : "tails";
 }
 
 /** Multiple coin flips
@@ -38,7 +40,11 @@ function coinFlip() {
  */
 
 function coinFlips(flips) {
-
+  var out = [];
+  for (var i = 0; i < flips; i++) {
+    out[i] = coinFlip();
+  }
+  return out;
 }
 
 /** Count multiple flips
@@ -55,7 +61,16 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
-
+  var headsCount = 0;
+  var tailsCount = 0;
+  for (var flip in array) {
+    if (flip == "heads") {
+      heads++;
+    } else {
+      tails++;
+    }
+  }
+  return {heads: headsCount, tails: tailsCount};
 }
 
 /** Flip a coin!
@@ -70,7 +85,8 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-
+  var flip = coinFlip();
+  return {call: call, flip: flip, result: flip ? "win" : "lose"};
 }
 
 
@@ -78,3 +94,4 @@ function flipACoin(call) {
  * 
  * Export all of your named functions
 */
+export {coinFlip, coinFlips, countFlips, flipACoin};
