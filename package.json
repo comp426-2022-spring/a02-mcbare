@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/comp426-2022-spring/a02-mcbare/issues"
   },
-  "homepage": "https://github.com/comp426-2022-spring/a02-mcbare#readme"
+  "homepage": "https://github.com/comp426-2022-spring/a02-mcbare#readme",
+  "dependencies": {
+    "minimist": "^1.2.6"
+  }
 }
