@@ -2,8 +2,6 @@
  * This module will emulate a coin flip given various conditions as parameters as defined below
  */
 
-var Math = require(Math);
-
 /** Simple coin flip
  * 
  * Write a function that accepts no parameters but returns either heads or tails at random.
@@ -17,7 +15,7 @@ var Math = require(Math);
  */
 
 function coinFlip() {
-  return Math.ceil(Math.random) ? "heads" : "tails";
+  return Math.floor(Math.random() * 2) ? "heads" : "tails";
 }
 
 /** Multiple coin flips
