@@ -63,9 +63,9 @@ function countFlips(array) {
   var tailsCount = 0;
   for (var flip in array) {
     if (flip == "heads") {
-      heads++;
+      headsCount++;
     } else {
-      tails++;
+      tailsCount++;
     }
   }
   return {heads: headsCount, tails: tailsCount};
