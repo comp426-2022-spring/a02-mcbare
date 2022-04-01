@@ -6,8 +6,11 @@ const args = require("minimist")(process.argv.slice(2));
 args["call"];
 const call = args.call;
 
-if (call == null || (call != "heads" && call != "tails")) {
-    console.error("Error: Invalid call\nUsage: node guess-flip --call=[heads|tails]");
+if (call == null) {
+    console.error("Error: no input.");
+    process.exit();
+} else if (call != "heads" && call != "tails") {
+    console.error("Usage: node guess-flip --call=[heads|tails]");
     process.exit();
 }
 
