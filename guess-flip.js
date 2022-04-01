@@ -10,8 +10,7 @@ if (call == null) {
     console.error("Error: no input.");
     process.exit();
 } else if (call != "heads" && call != "tails") {
-    console.log(call);
-    console.error("Usage: node guess-flip --call=[heads|tails]");
+    console.log("Usage: node guess-flip --call=[heads|tails]");
     process.exit();
 }
 
