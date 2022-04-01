@@ -6,7 +6,7 @@ const args = require("minimist")(process.argv.slice(2));
 args["call"];
 const call = args.call;
 
-if (call == null || call != ("heads" || "tails")) {
+if (call == null || (call != "heads" && call != "tails")) {
     console.error("ERROR: Invalid call");
     process.exit(1);
 }
