@@ -7,7 +7,7 @@ args["call"];
 const call = args.call;
 
 if (call == null || (call != "heads" && call != "tails")) {
-    console.error("ERROR: Invalid call");
+    console.error("Error: Invalid call\nUsage: node guess-flip --call=[heads|tails]");
     process.exit(1);
 }
 
